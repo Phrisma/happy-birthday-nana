@@ -1,0 +1,26 @@
+.page-content {
+    flex-grow: 1;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row; /* Mengubah arah flex ke kolom */
+    position: inherit;
+}
+
+.content-image {
+    max-width: 40%; /* Gambar tidak melebihi lebar kontainer */
+    height: auto;
+    margin-bottom: px; /* Tambahkan margin di bawah gambar */
+}
+
+.span {
+    font-size: 40px;
+    font-family: Baby Blue;
+    color: rgb(3, 3, 3);
+    position: relative;
+    top: -50px;
+    margin: 0px;
+    margin-left: 30px;
+    text-align: center;
+    
+}

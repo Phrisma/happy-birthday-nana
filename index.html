@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Selamat Ulang Tahun</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+    
+      <div class="wrapper">
+         <div class="title">
+            Birthday Form
+         </div>
+         <form id="myForm" action="#">
+            <div class="field">
+               <input type="text" required>
+               <label>Nama Kamu</label>
+            </div>
+            <div class="field">
+               <input type="text" required>
+               <label>Harapan Kamu di Tahun Ini</label>
+            </div>
+            
+            
+                <div class="field"><button class="button">Mulai</button>
+            </div>
+            
+            
+         </form>
+      </div>
+      
+
+      <script>
+        const form = document.getElementById("myForm");
+  const button = document.querySelector(".button");
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault(); // Mencegah form langsung submit
+
+    if (form.checkValidity()) { 
+      // Jika input valid, jalankan animasi lalu pindah halaman
+      button.classList.add("animate");
+
+      setTimeout(() => {
+        button.classList.remove("animate");
+        window.location.href = "page2.html";
+      }, 600);
+    } else {
+      // Jika input tidak valid, trigger validasi form bawaan HTML
+      form.reportValidity();
+    }
+  });
+      </script>
+   </body>
+</html>
